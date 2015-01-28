@@ -1,1 +1,18 @@
-test
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BetaVersion</key>
+	<integer>1</integer>
+	<key>BundleIdentifier</key>
+	<string>com.cidt.SuperAppointment</string>
+	<key>ChangeLog</key>
+	<string>seedoctor</string>
+	<key>ReleaseDate</key>
+	<integer>1422430976</integer>
+	<key>Title</key>
+	<string>測-全能掛號王</string>
+	<key>Version</key>
+	<string>1.08.03 (1.08.03)</string>
+</dict>
+</plist>
