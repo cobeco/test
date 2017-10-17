@@ -1,9 +1,0 @@
-[{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target": {
-    "namespace": "android_app",
-    "package_name": "tw.com.cidt.ttch",
-    "sha256_cert_fingerprints":
-    ["74:2C:C9:ED:52:40:D5:6F:93:22:B5:93:09:DD:A9:B0:A5:FC:BC:53:45:A1:00:4F:C7:E5:E3:CF:67:6D:26:2B"]
-  }
-}]
