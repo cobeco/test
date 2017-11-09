@@ -1,0 +1,72 @@
+<html>
+ < script >
+var custom = "tzuchi://";
+var alt = "https%3A%2F%2Fapp.tzuchi.com.tw%2Fmobiletest%2FdetectApp.html";
+var g_intent = "intent://app.tzuchi.com.tw/sMobile2/TCMMenu.aspx#Intent;scheme=tzuchi;package=tw.com.cidt.ttch;S.browser_fallback_url=https%3A%2F%2Fapp.tzuchi.com.tw%2Fmobiletest%2FdetectApp.html;end";
+var timer;
+var heartbeat;
+var iframe_timer;
+
+function clearTimers() {
+	clearTimeout(timer);
+	clearTimeout(heartbeat);
+	clearTimeout(iframe_timer);
+}
+
+function intervalHeartbeat() {
+	if (document.webkitHidden || document.hidden) {
+		clearTimers();
+	}
+}
+
+function tryIframeApproach() {
+	var iframe = document.createElement("iframe");
+	iframe.style.border = "none";
+	iframe.style.width = "1px";
+	iframe.style.height = "1px";
+	iframe.onload = function () {
+		document.location = alt;
+	};
+	iframe.src = custom;
+	document.body.appendChild(iframe);
+}
+
+function tryWebkitApproach() {
+	document.location = custom;
+	timer = setTimeout(function () {
+			document.location = alt;
+		}, 2500);
+}
+
+function useIntent() {
+	document.location = g_intent;
+}
+
+function launch_app_or_alt_url(el) {
+	heartbeat = setInterval(intervalHeartbeat, 200);
+	if (navigator.userAgent.match(/Chrome/)) {
+		useIntent();
+	} else if (navigator.userAgent.match(/Firefox/)) {
+		tryWebkitApproach();
+		iframe_timer = setTimeout(function () {
+				tryIframeApproach();
+			}, 1500);
+	} else {
+		tryIframeApproach();
+	}
+}
+function aaaccc() {
+
+	launch_app_or_alt_url("a");
+	event.preventDefault();
+}
+
+<  / script >
+
+<body>
+
+<div onclick="aaaccc();" size="10">clickclickclickclickclickclickclick</div>
+
+
+</body>
+</html>
